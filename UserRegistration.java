@@ -60,16 +60,6 @@ public class UserRegistration {
 		}
 	}
 
-	public void upperCase() {
-		System.out.println("In password present at least one Upper case alphabet");
-		String Uppercase = sc.nextLine();
-		if (Pattern.matches("(?=.*[A-Z]{1})[A-Za-z0-9@$_.-]{8}", Uppercase)) {
-			System.out.println("Alphabet is present ");
-		} else {
-			System.out.println("Alphabet is not  present");
-		}
-	}
-
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.checkFirst();
@@ -77,7 +67,7 @@ public class UserRegistration {
 		userRegistration.validEmail();
 		userRegistration.checkPassword();
 		userRegistration.mobileNumberFormat();
-		userRegistration.upperCase();
+
 	}
 
 }
