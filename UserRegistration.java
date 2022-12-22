@@ -70,6 +70,17 @@ public class UserRegistration {
 		}
 	}
 
+	// check at least one numeric number
+	public void numericNumber() {
+		System.out.println("In password present At least one Numeric number");
+		String Numeric = sc.nextLine();
+		if (Pattern.matches("(?=.*[0-9]{1})[A-Za-z0-9+$@_.-]{8}", Numeric)) {
+			System.out.println("Numeric Number is present");
+		} else {
+			System.out.println("Numeric Number is not present");
+		}
+	}
+
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.checkFirst();
