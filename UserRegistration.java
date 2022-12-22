@@ -18,10 +18,22 @@ public class UserRegistration {
 			System.out.println("First Name is Not valid");
 		}
 	}
+	//check the last name should be start with Capital latter
+		public void checklastName(){
+			System.out.println("Enter Last Name Start with capital latter");
+			String LastName = sc .nextLine();
+			if(Pattern.matches("[amod]{1,}[A-Z]{3}",LastName)) {
+				System.out.println("Last Name is valid");
+			}
+			else {
+				System.out.println("Last Name is not valid");
+			}
+		}
 
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.checkFirst();
+		userRegistration.checklastName();
 	}
 
 }
