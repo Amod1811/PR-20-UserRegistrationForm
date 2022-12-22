@@ -39,11 +39,23 @@ public class UserRegistration {
 		}
 	}
 
+	// check the password with rule and minimum 8 length
+	public void checkPassword() {
+		System.out.println("Enter the Password");
+		String password = sc.nextLine();
+		if (Pattern.matches("(?=.*[A-Za-z])[A-Za-z0-9+$@_.-]{8}", password)) {
+			System.out.println("password is valid");
+		} else {
+			System.out.println("password is not valid");
+		}
+	}
+
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.checkFirst();
 		userRegistration.checklastName();
 		userRegistration.validEmail();
+		userRegistration.checkPassword();
 	}
 
 }
