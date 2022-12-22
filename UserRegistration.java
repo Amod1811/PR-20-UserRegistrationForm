@@ -81,6 +81,17 @@ public class UserRegistration {
 		}
 	}
 
+	// check special character present
+	public void specialCharacter() {
+		System.out.println("In password present exact one special character");
+		String Special = sc.nextLine();
+		if (Pattern.matches("(?=.*[@&#]{1})[A-Za-z0-9+$@_.-]{8}", Special)) {
+			System.out.println("present exact one special char");
+		} else {
+			System.out.println(" not present exact one special char");
+		}
+	}
+
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.checkFirst();
@@ -89,6 +100,7 @@ public class UserRegistration {
 		userRegistration.checkPassword();
 		userRegistration.mobileNumberFormat();
 		userRegistration.upperCase();
+		userRegistration.specialCharacter();
 	}
 
 }
