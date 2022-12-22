@@ -50,12 +50,23 @@ public class UserRegistration {
 		}
 	}
 
+	public void mobileNumberFormat() {
+		System.out.println("Enter the MobileNumber");
+		String mobileNumber = sc.nextLine();
+		if (Pattern.matches("^(0-9\\d){2}?[0-9]{10}", mobileNumber)) {
+			System.out.println("Mobile Number is valid");
+		} else {
+			System.out.println("Mobile Number  is not valid");
+		}
+	}
+
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.checkFirst();
 		userRegistration.checklastName();
 		userRegistration.validEmail();
 		userRegistration.checkPassword();
+		userRegistration.mobileNumberFormat();
 	}
 
 }
